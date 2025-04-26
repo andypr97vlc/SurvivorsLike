@@ -1,12 +1,11 @@
 extends CharacterBody2D
 
-
-var speed = 300
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var player = get_node("/root/game/player")
 
 func _physics_process(delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
+	var speed = 300
 	velocity = direction * speed
 	
 	move_and_slide()

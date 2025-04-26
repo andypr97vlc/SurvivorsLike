@@ -1,4 +1,4 @@
-![alt text](logo.png)
+![alt text](./game/icon.png)
 
 Juego basado en Vampire Survivor para practicar programación en Godot
 

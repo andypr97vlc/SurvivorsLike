@@ -32,3 +32,12 @@ position = Vector2(878, 221)
 
 [node name="normal_tree4" parent="." instance=ExtResource("2_e2o6t")]
 position = Vector2(731, 555)
+
+[node name="slime2" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(885, 437)
+
+[node name="slime3" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(356, 108)
+
+[node name="slime4" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(386, 557)

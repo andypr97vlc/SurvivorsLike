@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="SurvivorsLike"
+config/description="Juego basado en Vampire Survivor para practicar programación en Godot"
 run/main_scene="uid://q7nsav4lubp"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="uid://48mwm32ksp5k"
 
 [input]
 

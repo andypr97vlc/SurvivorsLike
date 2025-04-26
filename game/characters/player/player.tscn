@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://djek3g046461f"]
+[gd_scene load_steps=24 format=3 uid="uid://djek3g046461f"]
 
 [ext_resource type="Script" uid="uid://cy7olevm5k2h8" path="res://characters/player/player.gd" id="1_5mkjs"]
 [ext_resource type="Texture2D" uid="uid://cqt4mf528alhf" path="res://characters/player/idle/Idle_Animation1.png" id="1_kyfeq"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dfq47unbjduca" path="res://characters/player/move/Move_Animation7.png" id="17_iopkm"]
 [ext_resource type="Texture2D" uid="uid://bge2hygp1hfwi" path="res://characters/player/move/Move_Animation8.png" id="18_pagxt"]
 [ext_resource type="Texture2D" uid="uid://dhwlodtdx1nmc" path="res://characters/player/move/Move_Animation9.png" id="19_2qgir"]
+[ext_resource type="PackedScene" uid="uid://byrlhftqsuv3c" path="res://assets/weapons/bow/bow.tscn" id="21_5mkjs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yybc7"]
 animations = [{
@@ -102,8 +103,12 @@ script = ExtResource("1_5mkjs")
 position = Vector2(0, -30)
 sprite_frames = SubResource("SpriteFrames_yybc7")
 animation = &"move"
+frame_progress = 0.939119
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kyfeq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="bow" parent="." instance=ExtResource("21_5mkjs")]
+position = Vector2(0, -25)
