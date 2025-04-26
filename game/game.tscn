@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://q7nsav4lubp"]
+
+[ext_resource type="PackedScene" uid="uid://djek3g046461f" path="res://characters/player/player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://dnqt8rlkvfee4" path="res://assets/trees/normal_tree.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://41yll1ivjobb" path="res://characters/enemy/slime/slime.tscn" id="3_feb5d"]
+
+[node name="game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -50
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[node name="player" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(576, 324)
+
+[node name="slime" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(239, 466)
+
+[node name="normal_tree" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(940, 185)
+
+[node name="normal_tree2" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(186, 264)
+
+[node name="normal_tree3" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(878, 221)
+
+[node name="normal_tree4" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(731, 555)
