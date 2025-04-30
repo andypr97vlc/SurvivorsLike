@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cv17xtc02pgvw" path="res://assets/weapons/bow/bow.gd" id="1_ctjeq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h6cwo"]
-radius = 893.002
+radius = 352.115
 
 [node name="bow" type="Area2D"]
 collision_layer = 0
@@ -23,7 +23,7 @@ texture = ExtResource("1_6scs6")
 
 [node name="shooting_point" type="Marker2D" parent="weapon_pivot/Bow"]
 unique_name_in_owner = true
-position = Vector2(15.5564, -15.5564)
+position = Vector2(11.3137, -11.3137)
 rotation = -0.785398
 
 [node name="Timer" type="Timer" parent="."]

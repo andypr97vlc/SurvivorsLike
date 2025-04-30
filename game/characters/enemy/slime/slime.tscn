@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://41yll1ivjobb"]
+[gd_scene load_steps=38 format=3 uid="uid://41yll1ivjobb"]
 
 [ext_resource type="Script" uid="uid://cqt3fpw4trqr1" path="res://characters/enemy/slime/slime.gd" id="1_wn8mf"]
 [ext_resource type="Texture2D" uid="uid://22uabd7dxtkt" path="res://characters/enemy/slime/attack/Slime1_attack1.png" id="2_7yp51"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://dc2743oy0jiyb" path="res://characters/enemy/slime/move/Slime1_move6.png" id="32_anmg6"]
 [ext_resource type="Texture2D" uid="uid://b6wykw4co3c8k" path="res://characters/enemy/slime/move/Slime1_move7.png" id="33_7ta5n"]
 [ext_resource type="Texture2D" uid="uid://c44lptji3ya47" path="res://characters/enemy/slime/move/Slime1_move8.png" id="34_jkl27"]
+[ext_resource type="Script" uid="uid://crjfyv2f8hxq8" path="res://characters/enemy/slime/animations_slime.gd" id="35_7yp51"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dj5wd"]
 animations = [{
@@ -158,7 +159,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4371q"]
-radius = 32.0156
+radius = 30.0167
 
 [node name="slime" type="CharacterBody2D"]
 collision_layer = 2
@@ -166,10 +167,12 @@ collision_mask = 3
 platform_floor_layers = 4294967040
 script = ExtResource("1_wn8mf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimationsSlime" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_dj5wd")
 animation = &"move"
-frame_progress = 0.483201
+frame_progress = 0.773264
+script = ExtResource("35_7yp51")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4371q")

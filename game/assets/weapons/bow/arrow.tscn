@@ -19,7 +19,6 @@ shape = SubResource("CircleShape2D_6c34a")
 [node name="Arrow" type="Sprite2D" parent="CollisionShape2D/pivot_arrow_head"]
 position = Vector2(-20, 0)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("2_38ulk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
