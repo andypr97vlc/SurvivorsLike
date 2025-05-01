@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddwm3x6i6qsnd"]
+
+[ext_resource type="Script" uid="uid://b11nctkgr0vou" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://bahip56vctfnm" path="res://Textures/Player/idle/ArchDemonIdle001-Sheet.png" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://dbxfc4v4yjmch" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
+radius = 5.0
+height = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwnis"]
+size = Vector2(12, 24)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_4ntmi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 4)
+texture = ExtResource("2_4ntmi")
+hframes = 6
+region_rect = Rect2(26, 13.5, 75, 81)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4ntmi")
+
+[node name="WalkTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="HurtBox" parent="." instance=ExtResource("3_btcbx")]
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+shape = SubResource("RectangleShape2D_gwnis")
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+
+[editable path="HurtBox"]

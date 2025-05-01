@@ -1,4 +1,4 @@
-![alt text](./game/icon.png)
+![Logo](./oldGame/icon.png)
 
 Juego basado en Vampire Survivor para practicar programación en Godot
 
@@ -17,6 +17,8 @@ Para apuntar ideas para el proyecto
 
 ## Tutos
 
-Videoguia para el proyecto
+Videoguias para el proyecto
+
+▶️ [Playlist](https://www.youtube.com/playlist?list=PLtosjGHWDab682nfZ1f6JSQ1cjap7Ieeb)
 
 ▶️ [Video YouTube](https://www.youtube.com/watch?v=GwCiGixlqiU&list=PLTTFOG24xy6IPNlGugXK8NYA9qV7r5AZL)
